@@ -12,7 +12,7 @@ class App extends Component {
   showFile = async e => {
     e.preventDefault();
     const reader = new FileReader();
-    reader.onload = async (e) => {
+    reader.onload = async e => {
       const text = (e.target.result);
       const names = text.replace(/\r\n/g, "\n").split("\n").filter(line => line);
       this.setState({
@@ -63,7 +63,6 @@ class App extends Component {
                 )
           }
         </div>
-
       </div>
     )
   }
