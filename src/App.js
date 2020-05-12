@@ -55,7 +55,7 @@ class App extends Component {
               <label htmlFor="file">Çekiliş Listesini Aktar</label>
               <input type="file" id="file" onChange={e => this.showFile(e)} />
             </div>
-          ) : this.state.name.length === "?" ? (
+          ) : this.state.name === "?" ? (
             <div className="start" onClick={this.onClick}>Şanslı kişiyi seç</div>
           ) : (
                 <div className="reset" onClick={this.reset}>Sıfırla</div>
