@@ -1,0 +1,82 @@
+body {
+  background: #333;
+}
+h1#headerNames {
+  margin-top: 10%;
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: 150px;
+  text-align: center;
+  cursor: pointer;
+}
+.start {
+  width: 280px;
+  margin: auto;
+  padding: 20px;
+  background: #1fa91f;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  cursor: pointer;
+}
+.selectFile {
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+  background: orangered;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  cursor: pointer;
+}
+.reset {
+  width: 280px;
+  margin: auto;
+  padding: 20px;
+  background: red;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  cursor: pointer;
+}
+.selectFile input{
+  display: none;
+}
+.selectFile label{
+  cursor: pointer;
+}
+#winner {
+  display: none;
+  margin-top: 10%;
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: 150px;
+  text-align: center;
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 50px;
+ }
+}
