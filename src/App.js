@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import loop from './loop.mp3';
-import win from './win.mp3';
-import './App.css';
+import loop from './assets/audios/loop.mp3';
+import win from './assets/audios/win.mp3';
+import './assets/css/App.css';
 
 class App extends Component {
   state = {
