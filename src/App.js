@@ -6,7 +6,7 @@ import './App.css';
 class App extends Component {
   state = {
     names: [],
-    name: ''
+    name: '?'
   }
 
   showFile = async (e) => {
@@ -34,7 +34,9 @@ class App extends Component {
       clearInterval(random);
       loop.pause();
       win.play();
-      document.getElementById("headerNames").innerHTML = this.state.names[Math.floor(Math.random() * (this.state.names.length))]
+      this.setState({
+        name: this.state.names[Math.floor(Math.random() * (this.state.names.length))]
+      });
     }, 5000);
   }
 
@@ -46,14 +48,14 @@ class App extends Component {
       <div>
         <audio className="loop"><source src={loop}></source></audio>
         <audio className="win"><source src={win}></source></audio>
-        <h1 id="headerNames">?</h1>
+        <h1 id="headerNames">{this.state.name}</h1>
         {
           !this.state.names.length ? (
             <div className="selectFile">
               <label htmlFor="file">Çekiliş Listesini Aktar</label>
               <input type="file" id="file" onChange={e => this.showFile(e)} />
             </div>
-          ) : !this.state.name.length ? (
+          ) : this.state.name.length === "?" ? (
             <div className="start" onClick={this.onClick}>Şanslı kişiyi seç</div>
           ) : (
                 <div className="reset" onClick={this.reset}>Sıfırla</div>
