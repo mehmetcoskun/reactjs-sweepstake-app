@@ -87,11 +87,8 @@ h1#headerNames {
   color: #fff;
   transform: translateY(-7px);
 }
-.selectFile input{
+input#file{
   display: none;
-}
-.selectFile label{
-  cursor: pointer;
 }
 #winner {
   display: none;

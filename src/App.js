@@ -22,6 +22,10 @@ class App extends Component {
     reader.readAsText(e.target.files[0]);
   }
 
+  onSelectFileClick = () => {
+    document.getElementById("file").click();
+  }
+
   onClick = () => {
     let i = 0;
     const loop = document.getElementsByClassName("loop")[0];
@@ -52,14 +56,14 @@ class App extends Component {
         <div className="wrap">
           {
             !this.state.names.length ? (
-              <div className="selectFile">
-                <label htmlFor="file">Çekiliş Listesini Aktar (txt)</label>
+              <div>
+                <button className="selectFile" onClick={this.onSelectFileClick}>Çekiliş Listesini Aktar (txt)</button>
                 <input type="file" id="file" onChange={e => this.showFile(e)} />
               </div>
             ) : this.state.name === "?" ? (
-              <div className="start" onClick={this.onClick}>Şanslı kişiyi seç</div>
+              <button className="start" onClick={this.onClick}>Şanslı kişiyi seç</button>
             ) : (
-                  <div className="reset" onClick={this.reset}>Sıfırla</div>
+                  <button className="reset" onClick={this.reset}>Sıfırla</button>
                 )
           }
         </div>
