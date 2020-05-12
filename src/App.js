@@ -9,7 +9,7 @@ class App extends Component {
     name: '?'
   }
 
-  showFile = async (e) => {
+  showFile = async e => {
     e.preventDefault();
     const reader = new FileReader();
     reader.onload = async (e) => {
@@ -49,18 +49,20 @@ class App extends Component {
         <audio className="loop"><source src={loop}></source></audio>
         <audio className="win"><source src={win}></source></audio>
         <h1 id="headerNames">{this.state.name}</h1>
-        {
-          !this.state.names.length ? (
-            <div className="selectFile">
-              <label htmlFor="file">Çekiliş Listesini Aktar</label>
-              <input type="file" id="file" onChange={e => this.showFile(e)} />
-            </div>
-          ) : this.state.name === "?" ? (
-            <div className="start" onClick={this.onClick}>Şanslı kişiyi seç</div>
-          ) : (
-                <div className="reset" onClick={this.reset}>Sıfırla</div>
-              )
-        }
+        <div className="wrap">
+          {
+            !this.state.names.length ? (
+              <div className="selectFile">
+                <label htmlFor="file">Çekiliş Listesini Aktar (txt)</label>
+                <input type="file" id="file" onChange={e => this.showFile(e)} />
+              </div>
+            ) : this.state.name === "?" ? (
+              <div className="start" onClick={this.onClick}>Şanslı kişiyi seç</div>
+            ) : (
+                  <div className="reset" onClick={this.reset}>Sıfırla</div>
+                )
+          }
+        </div>
 
       </div>
     )

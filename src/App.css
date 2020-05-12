@@ -1,5 +1,6 @@
 body {
-  background: #333;
+  background-color: #FEE140;
+  background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
 }
 h1#headerNames {
   margin-top: 10%;
@@ -9,56 +10,82 @@ h1#headerNames {
   text-align: center;
   cursor: pointer;
 }
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .start {
   width: 280px;
-  margin: auto;
-  padding: 20px;
-  background: #1fa91f;
-  border: 3px solid #fff;
-  border-radius: 10px;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  display: block;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
   cursor: pointer;
+  outline: none;
+  padding: 20px;
+  text-align: center;
+}
+.start:hover {
+  background-color: rgb(255, 169, 56);
+  box-shadow: 0px 15px 20px rgba(248, 233, 99, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
 }
 .selectFile {
-  width: 300px;
-  margin: auto;
-  padding: 20px;
-  background: orangered;
-  border: 3px solid #fff;
-  border-radius: 10px;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
+  width: 280px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  display: block;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
   cursor: pointer;
+  outline: none;
+  padding: 20px;
+  text-align: center;
+}
+.selectFile:hover {
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
 }
 .reset {
   width: 280px;
-  margin: auto;
-  padding: 20px;
-  background: red;
-  border: 3px solid #fff;
-  border-radius: 10px;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  display: block;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #fff;
+  background-color: rgb(221, 50, 50);
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
   cursor: pointer;
+  outline: none;
+  padding: 20px;
+  text-align: center;
+}
+.reset:hover {
+  box-shadow: 0px 15px 20px rgba(214, 68, 68, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
 }
 .selectFile input{
   display: none;
